@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data>
+        <record id="hr_ticket_app_employee_notification" model="mail.template">
+            <field name="name">One New HR Ticket is Created</field>
+            <field name="model_id" ref="rdp_hr_ticket.model_hr_ticket"/>
+            <field name="auto_delete">1</field>
+<!--             <field name="email_from">${object.user_id.partner_id.email_formatted |safe}</field>-->
+            <field name="email_to">${object.employee_name_id.work_email}</field>
+            <field name="subject">HR Ticket Submitted - Your Ticket Number: ${object.name}</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px;">
+                    <p>Dear ${object.employee_name_id.name},</p>
+
+                    Thank you for reaching out to the HR Department through our HR Ticket App. Your HR ticket has been successfully submitted, and we are here to assist you with your HR-related request or concern.
+                    <br></br>
+                    <br></br>
+                    <span style="color: red;"><b>Ticket Number: ${object.name}</b></span>
+                    <br></br>
+                    <br></br>
+                    We acknowledge the importance of your inquiry, and our dedicated team of HR professionals is already on the case. Rest assured, we are committed to providing you with a timely resolution and ensuring your needs are met.
+                    <br></br>
+                    <br></br>
+                    Our HR executives are reviewing your ticket and will be in touch shortly. If any additional information is required to expedite the process, they may reach out to you for clarification.
+                    <br></br>
+                    <br></br>
+                    Please know that we value your feedback and are dedicated to continuously enhancing our HR services to better meet your needs. Your satisfaction is our priority, and we will do everything possible to address your concern promptly.
+                    <br></br>
+                    <br></br>
+                    Once again, thank you for your cooperation and understanding. We will keep you informed of the progress regarding your ticket until it is resolved to your satisfaction.
+                    <br></br>
+                    <br></br>
+                    Best regards,
+                    <br></br>
+                    HR Team
+                    <br></br>
+                    <br></br>
+                </div>
+            </field>
+        </record>
+
+        <record id="automated_response_to_the_employee_who_raised_ticket" model="mail.template">
+            <field name="name">Resolution of HR Ticket for Employee and SPOC </field>
+            <field name="model_id" ref="rdp_hr_ticket.model_hr_ticket"/>
+            <field name="auto_delete">1</field>
+<!--             <field name="email_from">${object.user_id.partner_id.email_formatted |safe}</field>-->
+            <field name="email_to">${object.employee_name_id.work_email}</field>
+            <field name="subject">: Resolution of HR Ticket - ${object.name}</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px;">
+                    <p>Dear ${object.employee_name_id.name},</p>
+
+                    Thank you for your patience. We are pleased to inform you that your HR ticket with the <span style="color: red;"><b>Ticket Number: ${object.name}</b></span> has been successfully resolved.
+                    <br></br>
+                    <br></br>
+                    Our HR team has thoroughly reviewed and addressed your concern, and we believe we have provided a satisfactory resolution. Your feedback and satisfaction are essential to us, and we would like to hear from you regarding the resolution.
+                    <br></br>
+                    <br></br>
+                    We acknowledge the importance of your inquiry, and our dedicated team of HR professionals is already on the case. Rest assured, we are committed to providing you with a timely resolution and ensuring your needs are met.
+                    <br></br>
+                    <br></br>
+                    If you are satisfied with the provided solution, we kindly request you to close the ticket. To do so, you can simply click on the “close” tab OR suggest HR to close the same. Closing the ticket will help us maintain accurate records of the issues raised and resolved.
+                    <br></br>
+                    <br></br>
+                    However, if you have any further questions or if you believe the resolution requires further attention, we encourage you to request a review of the resolved ticket. Please respond to this email if you wish to review the matter. Our team will promptly reevaluate the matter to ensure it meets your expectations.
+                    <br></br>
+                    <br></br>
+                    Your feedback is invaluable to us, and we are committed to continuously improving our HR services to better serve you and all our employees. Your satisfaction is our priority, and we are here to assist you at any stage.
+                    <br></br>
+                    <br></br>
+                    Thank you for your cooperation and understanding throughout this process. We look forward to receiving your feedback and ensuring that all your HR needs are met promptly and efficiently.
+                    <br></br>
+                    <br></br>
+                    Best regards,
+                    <br></br>
+                    HR Team
+                </div>
+            </field>
+        </record>
+
+        <record id="automated_response_to_the_ticket_closed_notification_to_employee" model="mail.template">
+            <field name="name">HR Ticket Closure Templated to Employee </field>
+            <field name="model_id" ref="rdp_hr_ticket.model_hr_ticket"/>
+            <field name="auto_delete">1</field>
+<!--             <field name="email_from">${object.user_id.partner_id.email_formatted |safe}</field>-->
+            <field name="email_to">${object.employee_name_id.work_email}</field>
+            <field name="subject">HR Ticket Closure - ${object.name}</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px;">
+                    <p>Dear ${object.employee_name_id.name},</p>
+
+                    We hope this email finds you well. We are pleased to inform you that your HR ticket with the  <span style="color: red;"><b>Ticket Number: ${object.name}</b></span> has been successfully resolved and closed.
+                    <br></br>
+                    <br></br>
+                    Our HR team has diligently worked to address your concern, and we trust that the provided resolution has met your expectations. Your feedback is vital to us, and we would greatly appreciate hearing about your experience with our HR Ticket App.
+                    <br></br>
+                    <br></br>
+                    If you would like to share your feedback on the overall process or the assistance you received, we invite you to participate in a brief survey. Please click on the link below or copy and paste it into your web browser to access the survey for your  <span style="color: red;"><b> HR Ticket Number: ${object.name}</b></span>
+                    <br></br>
+                    <a href ="https://rdp.in/survey/start/experience-with-the-hr-ticket-app-25"> Click Here</a>
+                    <br></br>
+                    <br></br>
+                    The survey will only take a few minutes, and your responses will remain anonymous. Your feedback will help us enhance our HR services and ensure we continue to provide the best The survey will only take a few minutes, and your responses will remain anonymous. Your feedback will help us enhance our HR services and ensure we continue to provide the best support to all our employees. support to all our employees.
+                    <br></br>
+                    <br></br>
+                    If you prefer not to provide feedback, there is no obligation to participate. Your satisfaction is always our top priority, and we are glad to have been of assistance.
+                    <br></br>
+                    <br></br>
+                    Once again, thank you for bringing this matter to our attention and allowing us to address it promptly. If you have any further HR-related queries in the future, don't hesitate to use our HR Ticket App, and we will be more than happy to assist you.
+                    <br></br>
+                    <br></br>
+                    We value your feedback and are committed to continually improving our HR services to better serve you.
+                    <br></br>
+                    <br></br>
+                    HR Team
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>
+
