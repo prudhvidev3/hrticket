@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="contact_exists_wizard_template">
+            <t t-call="website.layout">
+                <div class="container">
+                    <h1>Contact with the same email already exists.</h1>
+                </div>
+            </t>
+        </template>
+
+        <template id="vendor_registration_success">
+            <t t-call="website.layout">
+                <div class="container">
+                    <h1>Vendor registration successful!</h1>
+                </div>
+            </t>
+        </template>
+        <record id="contact_exists_wizard_view" model="ir.ui.view">
+            <field name="name">Contact Exists Wizard</field>
+            <field name="model">contact.exists.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <footer>
+                        <button string="Close" class="btn-primary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
+

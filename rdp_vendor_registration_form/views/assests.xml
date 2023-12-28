@@ -1,0 +1,19 @@
+<!--<?xml version="1.0" encoding="UTF-8" ?>-->
+<!--<odoo>-->
+<!--    <data name="rdp_vendor_registration_form_assets" inherit_id="web.assets_frontend">-->
+<!--        <xpath expr="." position="inside">-->
+<!--            <script type="text/javascript" src="/rdp_vendor_registration_form/static/src/js/custom_script.js"/>-->
+<!--        </xpath>-->
+<!--    </data>-->
+<!--</odoo>-->
+
+
+<!--<?xml version="1.0" encoding="UTF-8" ?>-->
+<!--<odoo>-->
+<!--    <data name="rdp_vendor_registration_form assets" inherit_id="web.assets_backend">-->
+<!--    <xpath expr="." position="inside">-->
+<!--        <script type="text/javascript" src="/rdp_vendor_registration_form/static/src/js/custom_script.js"/>-->
+<!--    </xpath>-->
+<!--</data>-->
+
+<!--</odoo>-->

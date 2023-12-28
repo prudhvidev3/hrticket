@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+            <template id="contact_exists_wizard_template">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Contact with the same email already exists.</h1>
+                </div>
+        </t>
+    </template>
+
+    <template id="vendor_registration_success">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Vendor registration successful!</h1>
+                </div>
+        </t>
+    </template>
+    <record id="contact_exists_wizard_view" model="ir.ui.view">
+        <field name="name">Contact Exists Wizard</field>
+        <field name="model">contact.exists.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <footer>
+                    <button string="Close" class="btn-primary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+<!--        <record id="rdp_vendor_registration_form.view_contact_exists_wizard_form" model="ir.ui.view">-->
+<!--            <field name="name">contact.exists.wizard.form</field>-->
+<!--            <field name="model">contact.exists.wizard</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form>-->
+<!--                    <group>-->
+<!--                        <field name="message" readonly="1"/>-->
+<!--                    </group>-->
+<!--                    <footer>-->
+<!--                        <button string="Close" class="btn-secondary" onclick="close_wizard()"/>-->
+<!--                    </footer>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+
+
+
+<!--        <record id="action_view_existingcontact" model="ir.actions.act_window">-->
+<!--            <field name="name">contact.exists.wizard.form</field>-->
+<!--            <field name="model">contact.exists.wizard</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--            <field name="help" type="html">-->
+<!--                <p>-->
+<!--                    Write your Data-->
+<!--                </p>-->
+<!--            </field>-->
+<!--        </record>-->
+
+        <!-- Include your JavaScript file in the backend assets -->
+        <!--<record id="rdp_vendor_registration_form_assets" model="ir.ui.asset">-->
+        <!--    <field name="name">rdp_vendor_registration_form_assets</field>-->
+        <!--    <field name="sequence" type="integer">11</field>-->
+        <!--    <field name="asset" type="qweb">-->
+        <!--        <template id="custom_script" name="rdp_vendor_registration_form.custom_script" inherit_id="web.assets_backend">-->
+        <!--            <xpath expr="." position="inside">-->
+        <!--                <script type="text/javascript" src="/rdp_vendor_registration_form/static/src/js/custom_script.js"/>-->
+        <!--            </xpath>-->
+        <!--        </template>-->
+        <!--    </field>-->
+        <!--</record>-->
+    </data>
+</odoo>
+
+        <!--<?xml version="1.0" encoding="utf-8" ?>-->
+        <!--<odoo>-->
+        <!--    &lt;!&ndash; Define the view for the wizard &ndash;&gt;-->
+        <!--<record id="rdp_vendor_registration_form.view_contact_exists_wizard_form" model="ir.ui.view">-->
+        <!--    <field name="name">contact.exists.wizard.form</field>-->
+        <!--    <field name="model">contact.exists.wizard</field>-->
+        <!--        <field name="arch" type="xml">-->
+        <!--            <form>-->
+        <!--                <group>-->
+        <!--                    <field name="message" readonly="1"/>-->
+        <!--                </group>-->
+        <!--                <footer>-->
+        <!--                    <button string="Close" class="btn-secondary" onclick="close_wizard()"/>-->
+        <!--                </footer>-->
+        <!--            </form>-->
+        <!--        </field>-->
+        <!--    </record>-->
+
+        <!--    &lt;!&ndash; Include your JavaScript file in the backend assets &ndash;&gt;-->
+
+        <!--  <data name="rdp_vendor_registration_form_assets" inherit_id="web.assets_frontend">-->
+        <!--        <xpath expr="." position="inside">-->
+        <!--            <script type="text/javascript" src="/rdp_vendor_registration_form/static/src/js/custom_script.js"/>-->
+        <!--        </xpath>-->
+        <!--    </data>-->
+
+        <!--</odoo>-->
+
